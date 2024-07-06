@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"/>
+    <title>Hamster Kombat: calculator of profit</title>
+    <link href="assets/styles.css?v=21" rel="stylesheet" type="text/css"/>
+    <script type="application/javascript" src="assets/script.js?v=21" defer></script>
+</head>
+<body>
+<div class="calculator">
+    <div class="categories"></div>
+    <textarea name="dump" onchange="fill()" rows="1"></textarea>
+</div>
+
+<div class="flex-container">
+    <div class="balance-calculator">
+        <div>
+            <label for="current-balance">Current Balance</label>
+            <input type="number" id="current-balance" />
+        </div>
+        <div>
+            <label for="profit-per-hour">Profit per Hour</label>
+            <input type="number" id="profit-per-hour" />
+        </div>
+        <div id="time-to-billion">Time to reach 1 billion: </div>
+    </div>
+    
+
+    <div class="results">
+        <div>Top Profitability</div>
+        <ul id="top-results"></ul>
+    </div>
+</div>
+
+</body>
+</html>
