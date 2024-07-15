@@ -4,63 +4,48 @@ const config = {
 		items: {
 			support: {
 				name: 'Support team',
-				value: 0
 			},
 			hb: {
 				name: 'HamsterBooks',
-				value: 0
 			},
 			x: {
 				name: 'X',
-				value: 0
 			},
 			cointelegraph: {
 				name: 'Cointelegraph',
-				value: 0
 			},
 			ht: {
 				name: 'HamsterTube',
-				value: 0
 			},
 			hg: {
 				name: 'HamsterGram',
-				value: 0
 			},
 			tiktok: {
 				name: 'TikTok',
-				value: 0
 			},
 			coindesk: {
 				name: 'Coindesk',
-				value: 0
 			},
 			influencers: {
 				name: 'Influencers',
-				value: 0
 			},
 			ceo: {
 				name: 'CEO',
-				value: 0
 			},
 			it: {
 				name: 'IT team',
-				value: 0
 			},
 			marketing: {
 				name: 'Marketing',
-				value: 0
 			},
 			partnership: {
 				name: 'Partnership program',
-				value: 0
 			},
 			pt: {
 				name: 'Product team',
-				value: 0
 			},
 			bigdev: {
 				name: 'BisDev team',
-				value: 0
 			},
 			f2a: {
 				name: 'Two factor authentication'
@@ -109,6 +94,9 @@ const config = {
 			},
 			tokio: {
 				name: 'Data Center Tokyo'
+			},
+			Leaderboards: {
+				name: 'Leaderboards'
 			}
 		}
 	},
@@ -117,43 +105,33 @@ const config = {
 		items: {
 			fan: {
 				name: 'Fan tokens',
-				value: 0
 			},
 			staking: {
 				name: 'Staking',
-				value: 0
 			},
 			btc: {
 				name: 'BTC Pairs',
-				value: 0
 			},
 			eth: {
 				name: 'ETH Pairs',
-				value: 0
 			},
 			cmc: {
 				name: 'Top 10 cmc pairs',
-				value: 0
 			},
 			gamefi: {
 				name: 'GameFi tokens',
-				value: 0
 			},
 			defi20: {
 				name: 'Defi2.0 tokens',
-				value: 0
 			},
 			socialfi: {
 				name: 'SocialFi tokens',
-				value: 0
 			},
 			meme: {
 				name: 'Meme coins',
-				value: 0
 			},
 			shit: {
 				name: 'Shit coins',
-				value: 0
 			},
 			x10: {
 				name: 'Margin trading x10'
@@ -201,47 +179,36 @@ const config = {
 		items: {
 			kyc: {
 				name: 'KYC',
-				value: 0
 			},
 			kyb: {
 				name: 'KYB',
-				value: 0
 			},
 			legal: {
 				name: 'Legal opinion',
-				value: 0
 			},
 			sec: {
 				name: 'SEC transparency',
-				value: 0
 			},
 			aml: {
 				name: 'Anti money loundering',
-				value: 0
 			},
 			luae: {
 				name: 'License UAE',
-				value: 0
 			},
 			leu: {
 				name: 'License Europe',
-				value: 0
 			},
 			lasia: {
 				name: 'License Asia',
-				value: 0
 			},
 			lsa: {
 				name: 'License South America',
-				value: 0
 			},
 			lau: {
 				name: 'License Australia',
-				value: 0
 			},
 			lna: {
 				name: 'License North America',
-				value: 0
 			},
 			ln: {
 				name: 'License Nigeria'
@@ -272,25 +239,31 @@ const config = {
 			}
 		}
 	},
+	Web3: {
+		name: 'Web3',
+		items: {
+			DEX: {
+				name: 'DEX',
+			},
+			oracle: {
+				name: 'Oracle',
+			},
+			smartcontracts: {
+				name: 'Vesting Smartcontracts',
+			},
+			Launchpad: {
+				name: 'Launchpad',
+			},
+			Marketplace: {
+				name: 'NFT Marketplace',
+			}
+		}
+	},
 	specials: {
 		name: 'Specials',
 		items: {
-			/*t49: {
-				name: 'Token2049',
-				is_active: Date.now() / 1000 < 1713960000
-			},*/
 			tonusdt: {
 				name: 'USDT on TON',
-				config: {
-					start: {
-						cost: 10000,
-						profit: 1350
-					},
-					modifier: {
-						cost: 0,
-						profit: 6.99
-					}
-				}
 			},
 			bogdanoff: {
 				name: 'Bogdanoff is calling'
@@ -364,8 +337,8 @@ const config = {
 			istambul: {
 				name: 'CX Hub Istanbul'
 			},
-			winline: {
-				name: 'Winline'
+			bussines: {
+				name: 'Bussines jet'
 			}
 		}
 	}
@@ -374,7 +347,7 @@ const config = {
 const calculateTimeToBillion = () => {
     const balance = Number(document.getElementById('current-balance').value * 1000000);
     const profitPerHour = Number(document.getElementById('profit-per-hour').value);
-    const targetBalance = 1000000000; // 1 миллиард
+    const targetBalance = 18000000000; // 1 миллиард
     const formatter = Intl.NumberFormat('en', { notation: 'compact' });
 
     if (profitPerHour > 0) {
@@ -516,7 +489,7 @@ const calculate = () => {
     const topResultsList = document.getElementById('top-results');
     topResultsList.innerHTML = '';
 
-    topResults.slice(0, 95).forEach(result => {
+    topResults.slice(0, 90).forEach(result => {
         const li = document.createElement('li');
         li.textContent = `${result.name} (${formatter.format(result.cost / result.profit)} часов или ${formatter.format(result.cost / result.profit / 24)} дней)`;
         topResultsList.appendChild(li);
