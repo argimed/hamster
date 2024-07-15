@@ -328,9 +328,6 @@ const config = {
 			networkx: {
 				name: 'X Network 10 Million'
 			},
-			web3game: {
-				name: 'Web3 Game Con'
-			},
 			breakrecords: {
 				name: 'Hamster break records'
 			},
@@ -341,7 +338,15 @@ const config = {
 				name: 'Bussines jet'
 			}
 		}
-	}
+	},
+	tmp: {
+		name: 'Временные:',
+		items: {
+			tonusdt: {
+				name: 'Временная карта',
+			}
+		}
+	}	
 };
 
 const calculateTimeToBillion = () => {
